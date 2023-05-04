@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from pymysql import connections
 import os
 import boto3
@@ -22,7 +22,7 @@ def home():
 
 @app.route("/about", methods=['GET','POST'])
 def about():
-    return render_template('www.airAsia.com')
+    return redirect('https://www.airAsia.com')
 
 @app.route("/submitBooking", methods=['POST'])
 def submitBooking():
